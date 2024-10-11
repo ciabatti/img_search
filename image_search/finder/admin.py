@@ -10,6 +10,7 @@ import os
 
 # Embedding function
 db_path = "MyChromaDB"
+variabeile = "allskax"
 client = chromadb.PersistentClient(path=db_path)
 embedding_function = OpenCLIPEmbeddingFunction()
 data_loader = ImageLoader()
