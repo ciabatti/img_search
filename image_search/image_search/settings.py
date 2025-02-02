@@ -28,7 +28,8 @@ SECRET_KEY = "django-insecure-_!^vl^%wh_f!@ndj3ndyl$4+_^wwn2xz2d*htpfemb2t33zmtj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'tuo-dominio.com']
+
 
 
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+        "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -132,4 +134,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'ImagesLoaded')
 
 # URL  to get loaded data
 MEDIA_URL = '/media/'
+
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+
 
